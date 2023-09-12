@@ -5,334 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <title>Car Company Landing Page</title>
-    <style>
-        body, h1, h2, p, ul, li {
-            margin: 0;
-            padding: 0;
-        }
-        
-       
-        header {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    background-color: #333;
-    color: #fff;
-    padding: 20px;
-    z-index: 1000; 
-}
-        
-        header nav {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-        
-        header .logo img {
-            width: 100px;
-        }
-        
-        header ul {
-            list-style: none;
-            display: flex;
-        }
-        
-        header ul li {
-            margin-right: 20px;
-        }
-        
-        header ul li a {
-            text-decoration: none;
-            color: #fff;
-        }
-        header ul li a:hover{
-            border-radius: 5px;
-    background-color: black;
-    color: white;
-    transition: box-shadow 0.5s ease-in-out;
-    box-shadow: 0 0 10px whitesmoke;
-        }
-        
-        
-        .banner {
-            background-image: url('bg.jpg');
-            background-size: cover;
-            background-position: center;
-            text-align: center;
-            color: #fff;
-            padding: 100px 0;
-        }
-        
-        .banner h1 {
-            font-size: 36px;
-            margin-bottom: 20px;
-        }
-        
-        .banner p {
-            font-size: 18px;
-            margin-bottom: 40px;
-        }
-    
-        
-        .glow-on-hover {
-    width: 220px;
-    height: 50px;
-    border: none;
-    outline: none;
-    color: #fff;
-    background: #111;
-    cursor: pointer;
-    position: relative;
-    z-index: 0;
-    border-radius: 10px;
-}
-
-.glow-on-hover:before {
-    content: '';
-    background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
-    position: absolute;
-    top: -2px;
-    left:-2px;
-    background-size: 400%;
-    z-index: -1;
-    filter: blur(5px);
-    width: calc(100% + 4px);
-    height: calc(100% + 4px);
-    animation: glowing 20s linear infinite;
-    opacity: 0;
-    transition: opacity .3s ease-in-out;
-    border-radius: 10px;
-}
-
-.glow-on-hover:active {
-    color: #000
-}
-
-.glow-on-hover:active:after {
-    background: transparent;
-}
-
-.glow-on-hover:hover:before {
-    opacity: 1;
-}
-
-.glow-on-hover:after {
-    z-index: -1;
-    content: '';
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background: #111;
-    left: 0;
-    top: 0;
-    border-radius: 10px;
-}
-
-@keyframes glowing {
-    0% { background-position: 0 0; }
-    50% { background-position: 400% 0; }
-    100% { background-position: 0 0; }
-}
-        
-        
-        .features {
-            display: flex;
-            justify-content: space-around;
-            align-items: center;
-            padding: 30px 0;
-        }
-        
-        .feature-box {
-            text-align: center;
-            box-shadow: 0 5px 5px rgba(0, 0, 0, 0.1);
-            border-radius: 20px;
-            max-width: 300px; 
-          
-        }
-        .feature-box:hover{
-            transition: box-shadow 0.5s ease-in-out;
-    box-shadow: 0 0 30px black;
-        }
-        
-        .feature-box img {
-            width: 100%;
-            max-width: 300px;
-            height: 200px; 
-            border-radius: 10px;
-            margin-bottom: 20px;
-        }
-        .feature-box img:hover{
-     
-            transition: box-shadow 0.5s ease-in-out;
-    box-shadow: 0 0 30px black;
-        }
-        
-        .feature-box h2 {
-            font-size: 24px;
-            margin-bottom: 10px;
-        }
-        .feature-box p{
-            text-align: justify;
-            max-width: 300px;
-        }
-
-        .description {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: #f5f5f5;
-    padding: 80px;
-}
-
-.description-text {
-    padding-right: 20px;
-}
-
-.description h2 {
-    font-size: 24px;
-    margin-bottom: 20px;
-}
-
-
-.description p {
-    font-size: 16px;
-    line-height: 1.6;
-    margin-bottom: 20px;
-}
-
-.description-image img {
-    width: 100%;
-    max-width: 400px;
-    border-radius: 10px;
-}
-.description-image img:hover{
-    transition: box-shadow 0.5s ease-in-out;
-    box-shadow: 0 0 10px black;
-}
-.image-gallery {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    padding: 20px;
-    max-width: 1200px;
-    margin: 0 auto;
-    gap: 20px;
-}
-
-.image-item {
-    flex-basis: calc(33.33% - 20px);
-    overflow: hidden;
- 
-}
-
-.image-item img {
-    width: 100%;
-    height: auto;
-    display: block;
-    transition: transform 0.2s;
-}
-
-
-.big-image {
-    flex-basis: calc(66.66% - 20px);
-    border-radius: 10px;
-}
-
-
-.small-image {
-    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.1);
-    border-radius: 10px;
-}
-
-.image-item:hover img {
-    transform: scale(1.1);
-}
-   
-.galheading{
-    text-align: center;
-    font-size: 50px;
-}
-       
-        footer {
-            background-color: #333;
-            color: #fff;
-            text-align: center;
-            padding: 20px 0;
-        }
-
-@media (max-width: 768px) {
-    header {
-        padding: 10px;
-    }
-
-    header .logo img {
-        width: 80px;
-    }
-
-    header ul {
-        flex-direction: column;
-        align-items: center;
-        background-color: #333;
-        position: absolute;
-        top: 60px;
-        left: 0;
-        width: 100%;
-        max-height: 0;
-        overflow: hidden;
-        transition: max-height 0.3s ease-in-out;
-    }
-
-    header ul.active {
-        max-height: 200px; 
-    }
-
-    header ul li {
-        margin: 10px 0;
-    }
-
-    .banner {
-        padding: 60px 0;
-    }
-
-    .banner h1 {
-        font-size: 28px;
-    }
-
-    .banner p {
-        font-size: 16px;
-    }
-
-    .features {
-        flex-direction: column;
-        text-align: center;
-        padding: 20px 0;
-       
-    }
-
-  
-    .feature-box {
-        margin: 20px 0;
-        width: 100%;
-    }
-
-    .feature-box img {
-        max-width: 100%;
-    }
-  
-
-    .description {
-        padding: 20px;
-    }
-
-    .description-image img {
-        max-width: 100%;
-    }
-    .image-item {
-                flex-basis: calc(50% - 20px);
-            }
-}
-        </style>
+   <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
     <header>
@@ -341,10 +14,10 @@
                 <img src="logo.png" alt="Car Company Logo">
             </div>
             <ul>
-                <li><a href="#">Home</a></li>
+                <li><a href="index.html">Home</a></li>
                 <li><a href="#">Cars</a></li>
-                <li><a href="#">About Us</a></li>
-                <li><a href="#">Contact</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="contactus.html">Contact</a></li>
             </ul>
         </nav>
     </header>
@@ -359,17 +32,17 @@
         <div class="headin"><h2>Our Featured Cars</h2></div>
         
         <div class="feature-box">
-            <img src="m3.jpg" alt="Car 1">
+            <img src="assets/img/m3.jpg" alt="Car 1">
             <h2>BMW 3 Series</h2>
             <p>The BMW 3 Series is an iconic compact luxury sedan that offers a blend of sportiness and elegance. </p>
         </div>
         <div class="feature-box">
-            <img src="x5.jpg" alt="Car 2">
+            <img src="assets/img/x5.jpg" alt="Car 2">
             <h2>BMW X5</h2>
             <p>The BMW X5 is a luxury midsize SUV that combines the versatility of an SUV with the luxury and performance expected from a BMW. </p>
         </div>
         <div class="feature-box">
-            <img src="i3.jpg" alt="Car 3">
+            <img src="assets/img/i3.jpg" alt="Car 3">
             <h2>BMW i3</h2>
             <p>The BMW i3 is an electric compact car designed with sustainability and urban mobility in mind. It features a distinctive and futuristic design with a lightweight carbon-fiber-reinforced body.</p>
         </div>
@@ -383,29 +56,29 @@
             <p>Donec nec dapibus arcu, eu congue mauris. Phasellus efficitur euismod tortor eget vehicula. Nulla facilisi.</p>
         </div>
         <div class="description-image">
-            <img src="bg.jpg" alt="Company Image">
+            <img src="assets/img/bg.jpg" alt="Company Image">
         </div>
     </section>
     <h2 class="galheading">Gallery</h2>
     <section class="image-gallery">
         
         <div class="image-item big-image">
-            <img src="bg.jpg" alt="Large Image">
+            <img src="assets/img/bg.jpg" alt="Large Image">
         </div>
         <div class="image-item small-image">
-            <img src="i3.jpg" alt="Small Image 1">
+            <img src="assets/img/i3.jpg" alt="Small Image 1">
         </div>
         <div class="image-item small-image">
-            <img src="m3.jpg" alt="Small Image 2">
+            <img src="assets/img/m3.jpg" alt="Small Image 2">
         </div>
         <div class="image-item small-image">
-            <img src="x5.jpg" alt="Small Image 3">
+            <img src="assets/img/x5.jpg" alt="Small Image 3">
         </div>
         <div class="image-item small-image">
-            <img src="bg.jpg" alt="Small Image 4">
+            <img src="assets/img/bg.jpg" alt="Small Image 4">
         </div>
         <div class="image-item small-image">
-            <img src="m3.jpg" alt="Small Image 5">
+            <img src="assets/img/m3.jpg" alt="Small Image 5">
         </div>
     </section>
 
