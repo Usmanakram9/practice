@@ -253,126 +253,7 @@ footer {
     padding: 20px 0;
 }
 
-@media (max-width: 768px) {
-header {
-padding: 10px;
-}
 
-
-header .logo img {
-width: 80px;
-}
-
-header ul {
-flex-direction: column;
-align-items: center;
-background-color: #333;
-position: absolute;
-top: 60px;
-left: 0;
-width: 100%;
-max-height: 0;
-overflow: hidden;
-transition: max-height 0.3s ease-in-out;
-}
-
-header ul.active {
-max-height: 200px; 
-}
-
-header ul li {
-margin: 10px 0;
-}
-
-.banner {
-padding: 60px 0;
-}
-
-.banner h1 {
-font-size: 28px;
-}
-
-.banner p {
-font-size: 16px;
-}
-
-.features {
-flex-direction: column;
-text-align: center;
-padding: 20px 0;
-
-}
-
-
-.feature-box {
-margin: 20px 0;
-width: 100%;
-}
-
-.feature-box img {
-max-width: 100%;
-}
-
-
-.description {
-padding: 20px;
-}
-
-.description-image img {
-max-width: 100%;
-}
-.image-item {
-        flex-basis: calc(50% - 20px);
-    }
-
-    .about {
-        flex-direction: column;
-    }
-
-    .aboutimg img {
-        max-width: 100%;
-    }
-
-    .about,
-    .description {
-        padding: 20px;
-    }
-
-    .services {
-        flex-direction: column;
-    justify-content: center;
-    }
-
-    .service {
-        display: flex; 
-        flex-direction: column; 
-        text-align: center;
-        box-shadow: 0 5px 5px rgba(0, 0, 0, 0.1);
-        border-radius: 10px;
-        max-width: 300px;
-        padding: 20px 20px;
-        transition: box-shadow 0.5s ease-in-out;
-        background-color: #fff;
-        margin-bottom: 20px;
-        margin-left: 50px;
-       
-    }
-
-    .contact-container {
-        flex-direction: column;
-    }
-
-   
-    .contact-form,
-    .map-container {
-        margin-right: 0;
-    }
-
-    .contact-form,
-    .map-container {
-        margin-top: 20px;
-    }
-}
 
 /*About us section*/
 
@@ -485,14 +366,16 @@ margin-bottom: 20px;
 
 .contact-form input[type="text"],
 .contact-form textarea {
-    width: 100%;
+   
+    width: 600px;
     padding: 10px;
     margin-bottom: 20px;
     border: 1px solid #ccc;
-    border-radius: 3px;
+    border-radius: 3px; 
+    
 }
 .contact-form textarea {
-width: 100%;
+width: 600px;
 padding: 10px;
 margin-bottom: 20px;
 border: 1px solid #ccc;
@@ -522,3 +405,130 @@ resize: none;
     width: 100%;
     height: 100%;
 }
+
+@media (max-width: 768px) {
+    header {
+    padding: 10px;
+    }
+    
+    
+    header .logo img {
+    width: 80px;
+    }
+    
+    header ul {
+        flex-direction: column;
+        align-items: center;
+        background-color: #333;
+        position: absolute;
+        top: 30px;
+        left: 0;
+        width: 100%;
+        height: 150px;
+        
+        transition: max-height 0.3s ease-in-out;
+      }
+    
+    header ul.active {
+    max-height: 200px; 
+    }
+    
+    header ul li {
+    margin: 10px 0;
+    }
+    
+    .banner {
+    padding: 60px 0;
+    }
+    
+    .banner h1 {
+    font-size: 28px;
+    }
+    
+    .banner p {
+    font-size: 16px;
+    }
+    
+    .features {
+    flex-direction: column;
+    text-align: center;
+    padding: 20px 0;
+    
+    }
+    
+    
+    .feature-box {
+    margin: 20px 0;
+    width: 100%;
+    }
+    
+    .feature-box img {
+    max-width: 100%;
+    }
+    
+    
+    .description {
+    padding: 20px;
+    }
+    
+    .description-image img {
+    max-width: 100%;
+    }
+    .image-item {
+            flex-basis: calc(50% - 20px);
+        }
+    
+        .about {
+            flex-direction: column;
+        }
+    
+        .aboutimg img {
+            max-width: 100%;
+        }
+    
+        .about,
+        .description {
+            padding: 20px;
+        }
+    
+        .services {
+            flex-direction: column;
+        justify-content: center;
+        }
+    
+        .service {
+            display: flex; 
+            flex-direction: column; 
+            text-align: center;
+            box-shadow: 0 5px 5px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            max-width: 300px;
+            padding: 20px 20px;
+            transition: box-shadow 0.5s ease-in-out;
+            background-color: #fff;
+            margin-bottom: 20px;
+            margin-left: 10px;
+           
+        }
+    
+        .contact-container {
+            flex-direction: column;
+        }
+    
+       
+        .contact-form,
+        .map-container {
+            margin-right: 0;
+        }
+    
+        .contact-form input[type="text"],
+    .contact-form textarea {
+       
+        width: 100%;
+    }
+    
+        .contact-form,
+        .map-container {
+            margin-top: 20px;
+        }
+    }
