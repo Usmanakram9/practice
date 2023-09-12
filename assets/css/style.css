@@ -1,6 +1,7 @@
 body, h1, h2, p, ul, li {
     margin: 0;
     padding: 0;
+    
 }
 
 
@@ -9,10 +10,12 @@ position: fixed;
 top: 0;
 left: 0;
 right: 0;
-background-color: #333;
+background-color: RGB(22, 22, 22);
 color: #fff;
-padding: 20px;
+padding: 5px;
 z-index: 1000; 
+opacity: .9;
+
 }
 
 header nav {
@@ -35,16 +38,23 @@ header ul li {
 }
 
 header ul li a {
+    padding: 10 20px;
     text-decoration: none;
     color: #fff;
 }
-header ul li a:hover{
-    border-radius: 5px;
-background-color: black;
-color: white;
-transition: box-shadow 0.5s ease-in-out;
-box-shadow: 0 0 10px whitesmoke;
+
+header ul li a::after{
+    content: '';
+    display: block;
+    height: 4px;
+    width: 0;
+    background:white;
+    transition: all .5s;
 }
+li a:hover::after{
+    width: 100%;
+}
+
 
 
 .banner {
@@ -126,6 +136,12 @@ border-radius: 10px;
 50% { background-position: 400% 0; }
 100% { background-position: 0 0; }
 }
+.headin{
+    padding:15px ;
+    text-align: center;
+    font-family: "Lucida Console", "Courier New", monospace;
+
+}
 
 
 .features {
@@ -140,6 +156,8 @@ border-radius: 10px;
     box-shadow: 0 5px 5px rgba(0, 0, 0, 0.1);
     border-radius: 20px;
     max-width: 300px; 
+    height: 350px;
+    
   
 }
 .feature-box:hover{
@@ -153,6 +171,7 @@ box-shadow: 0 0 30px black;
     height: 200px; 
     border-radius: 10px;
     margin-bottom: 20px;
+    overflow: hidden;
 }
 .feature-box img:hover{
 
@@ -169,12 +188,17 @@ box-shadow: 0 0 30px black;
     max-width: 300px;
 }
 
+.galheading{
+    padding:15px ;
+    text-align: center;
+    font-family: "Lucida Console", "Courier New", monospace;
+}
 .description {
 display: flex;
 justify-content: space-between;
 align-items: center;
 background-color: #f5f5f5;
-padding: 80px;
+padding: 20px;
 }
 
 .description-text {
@@ -202,6 +226,50 @@ border-radius: 10px;
 transition: box-shadow 0.5s ease-in-out;
 box-shadow: 0 0 10px black;
 }
+
+
+.category ul {
+    padding: 20px;
+    text-align: center;
+}
+
+
+.category ul li {
+    display: inline; 
+    margin: 0 10px; 
+}
+
+.category ul li a {
+    padding: 10px 20px;
+    text-decoration: none;
+    background: #f0f0f0; 
+    opacity: 0.6;
+    border: 1px solid #ccc; 
+    border-radius: 5px; 
+    color: #333; 
+     font-family: "Lucida Console", "Courier New", monospace;
+    
+     position: relative; 
+    }
+    
+    .category ul li a::after {
+        content: '';
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        height: 2px;
+        background: black; 
+                transition: transform 0.3s ease-in-out;
+        transform-origin: right; 
+        transform: scaleX(0); 
+    }
+    
+    .category ul li a:hover::after {
+        transform-origin: left;
+        transform: scaleX(1); 
+    }
+
 .image-gallery {
 display: flex;
 flex-wrap: wrap;
@@ -215,12 +283,11 @@ gap: 20px;
 .image-item {
 flex-basis: calc(33.33% - 20px);
 overflow: hidden;
-
 }
 
 .image-item img {
 width: 100%;
-height: auto;
+height: 100%;
 display: block;
 transition: transform 0.2s;
 }
@@ -246,13 +313,45 @@ text-align: center;
 font-size: 50px;
 }
 
-footer {
-    background-color: #333;
-    color: #fff;
-    text-align: center;
-    padding: 20px 0;
-}
-
+.footer{
+    background:#000;
+    padding:30px 0px;
+    font-family: 'Play', sans-serif;
+    text-align:center;
+    }
+    
+    .footer .row{
+    width:100%;
+    margin:1% 0%;
+    padding:0.6% 0%;
+    color:gray;
+    font-size:0.8em;
+    }
+    
+    .footer .row a{
+    text-decoration:none;
+    color:gray;
+    transition:0.5s;
+    }
+    
+    .footer .row a:hover{
+    color:#fff;
+    }
+    
+    .footer .row ul{
+    width:100%;
+    }
+    
+    .footer .row ul li{
+    display:inline-block;
+    margin:0px 30px;
+    }
+    
+    .footer .row a i{
+    font-size:2em;
+    margin:0% 1%;
+    }
+    
 
 
 /*About us section*/
@@ -425,7 +524,7 @@ resize: none;
         left: 0;
         width: 100%;
         height: 150px;
-        
+        opacity: 0.9;
         transition: max-height 0.3s ease-in-out;
       }
     
@@ -531,4 +630,18 @@ resize: none;
         .map-container {
             margin-top: 20px;
         }
+
+        .footer{
+            text-align:left;
+            padding:5%;
+            }
+            .footer .row ul li{
+            display:block;
+            margin:10px 0px;
+            text-align:left;
+            }
+            .footer .row a i{
+            margin:0% 3%;
+            }
+            
     }
